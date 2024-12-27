@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <div class="Login-section">
+
+        <h1>Admin Login</h1>
+        <div class="border"></div>
+        <form class="Login-form" id="loginForm" action="" method="post">
+            <input type="email" id="email" class="Login-form-text" placeholder="Email" required>
+            <input type="password" id="password" class="Login-form-text" placeholder="Password" required>
+            <input type="submit" class="form-btn" value="Login">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+
+            if (email === 'ahmed@gmail.com' && password === '12345678') {
+
+                window.location.href = 'home.html';
+            } else {
+                alert('Invalid email or password.');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
